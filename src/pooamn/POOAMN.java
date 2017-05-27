@@ -6,6 +6,7 @@
 package pooamn;
 
 import data.Grafica;
+import data.Persona;
 
 /**
  *
@@ -18,14 +19,29 @@ public class POOAMN {
      */
     public static void main(String[] args) {
         
-        Grafica grafica1 = new Grafica("GRafica de Disp.");
-        double datos[][] = new double[5][2];
-        datos[0][0] = 3;
-        datos[0][1] = 4;
-        datos[1][0] = 12;
-        datos[1][1] = 34;
-        
-        grafica1.agregarSerie(datos,"a");
+//        Grafica grafica1 = new Grafica("GRafica de Disp.");
+//        Grafica grafica2 = new Grafica("GRafica de Disp.2");
+//        double datos[] = new double[]{2,3,4,5,6};
+//        double datos2[] = new double[]{24,34,44,54,64};
+//       
+//                
+//        grafica1.agregarSerie(datos,"a");
+//        grafica1.agregarSerie(datos2,"b");
+//        grafica1.mostrarGrafica();
+//        grafica2.agregarSerie(datos,"a");
+//        grafica2.agregarSerie(datos2,"b");
+//        grafica2.mostrarGrafica();
+
+       Persona juan = new Persona();
+       Persona maria = new Persona("Maria Mercedes", 17, 'f',"Mexicana");
+       System.out.println();
+       juan.setNombre("Juan Alberto");
+       juan.setSexo('m');
+       juan.setEdad(23);
+       juan.setNacionalidad("Aleman");
+       System.out.println(maria.getNombre()+" Edad: "+maria.getEdad() );
+       System.out.println(juan.toString());
+       
     }
     
 }

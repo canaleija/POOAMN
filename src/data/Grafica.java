@@ -5,6 +5,8 @@
  */
 package data;
 
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartFrame;
 import org.jfree.chart.JFreeChart;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
@@ -15,7 +17,7 @@ import org.jfree.data.xy.XYSeriesCollection;
  */
 public class Grafica {
     // definir atributos que pretendemos que describan al objeto
-    private  JFreeChart grafica;
+    private JFreeChart grafica;
     private  String titulo;
     private  XYSeriesCollection series;
     
@@ -26,14 +28,13 @@ public class Grafica {
       this.grafica = null;
     }
     
-    public void agregarSerie(double[][] datos,String nombreSerie){
+    public void agregarSerie(double[] datos,String nombreSerie){
        XYSeries serie = new XYSeries(nombreSerie);
        // agregar de forma dinamica los datos a la serie
        double i,j;
        for (int x=0; x<datos.length;x++){
-           i = datos[x][0];
-           j = datos[x][1];
-          serie.add(i, j);
+           
+          serie.add(x, datos[x]);
        
        }
        // agregamos la serie a la colección 
@@ -42,7 +43,12 @@ public class Grafica {
     }
        
     public void mostrarGrafica(){
-     // TODO: mostrar la grafica
+     // instanciar un panel para poder mostrarla 
+     this.grafica = ChartFactory.createXYLineChart(this.titulo,"x","y",series);
+     
+        ChartFrame frame = new ChartFrame(titulo, grafica);
+        frame.pack();
+        frame.setVisible(true);
     }
     
     
