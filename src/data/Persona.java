@@ -17,12 +17,12 @@ public class Persona {
     private String nacionalidad;
     
     // constructor defecto
-    public Persona (){
-      this.nombre = "";
-      this.edad = 0;
-      this.sexo = 'f';
-      this.nacionalidad = "desconocida";
-    }
+//    public Persona (){
+//      this.nombre = "";
+//      this.edad = 0;
+//      this.sexo = 'f';
+//      this.nacionalidad = "desconocida";
+//    }
     
     public Persona (String nombre,int edad,
              char sexo,String nacionalidad){

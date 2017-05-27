@@ -5,7 +5,9 @@
  */
 package pooamn;
 
+import data.Alumno;
 import data.Grafica;
+import data.Materia;
 import data.Persona;
 
 /**
@@ -32,15 +34,25 @@ public class POOAMN {
 //        grafica2.agregarSerie(datos2,"b");
 //        grafica2.mostrarGrafica();
 
-       Persona juan = new Persona();
-       Persona maria = new Persona("Maria Mercedes", 17, 'f',"Mexicana");
-       System.out.println();
-       juan.setNombre("Juan Alberto");
-       juan.setSexo('m');
-       juan.setEdad(23);
-       juan.setNacionalidad("Aleman");
-       System.out.println(maria.getNombre()+" Edad: "+maria.getEdad() );
-       System.out.println(juan.toString());
+//       Persona juan = new Persona();
+//       Persona maria = new Persona("Maria Mercedes", 17, 'f',"Mexicana");
+//       System.out.println();
+//       juan.setNombre("Juan Alberto");
+//       juan.setSexo('m');
+//       juan.setEdad(23);
+//       juan.setNacionalidad("Aleman");
+//       System.out.println(maria.getNombre()+" Edad: "+maria.getEdad() );
+//       System.out.println(juan.toString());
+      Materia[] materias = new Materia[2];
+      materias[0]= new Materia("AMN","Juan Camaney","11:30 a 14:30");
+      materias[1]= new Materia("Ingenieria De Software","Juan Camaney","11:30 a 14:30");
+     
+      Alumno laura = new Alumno("it452017-56t", materias, "UNID");
+      laura.setNombre("Laura Garza");
+      laura.setNacionalidad("Francesa");
+      laura.setEdad(34);
+      
+      System.out.println();
        
     }
     
