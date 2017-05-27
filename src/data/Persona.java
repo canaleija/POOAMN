@@ -31,6 +31,11 @@ public class Persona {
      this.sexo = sexo;
      this.nacionalidad = nacionalidad;
     }
+    
+    public String saludo (){
+        
+        return "Hola! soy "+ this.nombre;
+    }
 
     @Override
     public String toString() {

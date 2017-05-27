@@ -52,7 +52,17 @@ public class POOAMN {
       laura.setNacionalidad("Francesa");
       laura.setEdad(34);
       
-      System.out.println();
+      
+      
+      Persona rosa = new Persona("Rosa", 23, 'f', "china");
+      // los objetos se comportan de la forma
+      //en que se construyen
+      Persona[] personas = new Persona[2];
+      personas[0] = laura;
+      personas[1] = rosa;
+      
+      
+      System.out.println(rosa.saludo());
        
     }
     

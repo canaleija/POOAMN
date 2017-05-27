@@ -28,6 +28,11 @@ public class Alumno extends Persona {
       this.materias = materias;
       this.escuela =escuela;
     }
+    @Override
+    public String saludo (){
+        
+        return super.saludo()+" y soy alumno! con la matricula"+this.matricula;
+    }
 
     /**
      * @return the matricula
